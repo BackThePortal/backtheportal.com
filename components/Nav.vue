@@ -1,6 +1,6 @@
 <template>
 	<header
-		class="group absolute sticky top-0 flex border-b-4 border-slate-300 bg-sky-700/50 p-4 shadow-lg backdrop-blur-sm transition hover:border-white hover:bg-sky-600/70 hover:shadow-2xl"
+		class="group sticky top-0 flex border-b-4 border-slate-300 bg-center p-4 shadow-lg backdrop-blur-sm transition hover:border-white hover:bg-sky-600/70 hover:shadow-2xl"
 	>
 		<NavLink
 			to="/"

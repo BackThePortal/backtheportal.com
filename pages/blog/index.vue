@@ -1,17 +1,18 @@
 <template>
 	<div>
 		<h2 class="text-5xl font-medium">Blog</h2>
-		<article v-for="post in contentQuery">
-			<h3>{{ post.title }}</h3>
-		</article>
+		<ContentList path="/blog/posts" v-slot="{ posts }">
+			{{ posts }}
+			<section class="grid">
+				<article class="border border-slate-100" v-for="post in posts">
+					<h3 v-html="post.title"></h3>
+					<p v-text="post.body"></p>
+				</article>
+			</section>
+		</ContentList>
 	</div>
 </template>
 
-<script setup lang="ts">
-const contentQuery = await queryContent('blog', 'posts')
-	.sort({ title: 1 })
-	.limit(5)
-	.find();
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>

@@ -12,6 +12,8 @@
 		my web projects, as well as my blog and other cool things I've done.
 	</p>
 
+	<p>I'm...</p>
+
 	<h3 class="mb-4 mt-6 text-2xl font-bold">Latest blog posts</h3>
 </template>
 
@@ -32,4 +34,11 @@ const sentences = {
 const sentence = ref(sentences.random);
 </script>
 
-<style scoped></style>
+<style>
+@tailwind base;
+@layer base {
+	p {
+		@apply mb-2;
+	}
+}
+</style>
